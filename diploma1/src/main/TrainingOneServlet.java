@@ -53,7 +53,7 @@ public class TrainingOneServlet extends HttpServlet {
 						PreparedStatement prepStmt3 = con.prepareStatement(sql3);
 						rs = prepStmt3.executeQuery();
 						
-						if(!rs.next()){
+						if(!rs.next()){//
 							String sql2 = "INSERT INTO `results`(`id`, `student_id`, `word_id`, `topic_id`, `task_type`)"
 									+ " VALUES (0, '" + session.getAttribute("studentID") + "', '" + wordID 
 									+ "', '" + topicID + "', '" + task_type + "');";
